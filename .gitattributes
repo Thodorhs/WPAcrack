@@ -3,3 +3,4 @@ WPAcrack/** filter=lfs diff=lfs merge=lfs -text
 *.md filter=lfs diff=lfs merge=lfs -text
 *.txt filter=lfs diff=lfs merge=lfs -text
 *.sh filter=lfs diff=lfs merge=lfs -text
+rockyou.txt filter=lfs diff=lfs merge=lfs -text
