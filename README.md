@@ -1,10 +1,3 @@
-# WPAcrack
-This repo is made for educational purposes on how to crack a WPA encrypted network.
-Using aircrack-ng.
-
-# Prerequisites
-- A wireless adapter that can go on monitor mode 
-- kali Linux (for using its various penatration tools)
-
-# How to run
-./wpa.sh
+version https://git-lfs.github.com/spec/v1
+oid sha256:4a0156ef9706b83292e9eb63c7761207b4c02799c3c6dd8d710f13ef302156eb
+size 259
