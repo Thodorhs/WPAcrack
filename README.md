@@ -3,8 +3,12 @@ This repo is made for educational purposes on how to crack a WPA encrypted netwo
 Using aircrack-ng
 
 # Prerequisites
-- wireless adpter with monitor mode
+- wireless adapter with monitor mode
 - kali Linux (for using is varius penatration tools)
 
 # Run
-./wpa.sh
+- ./wpa.sh
+
+***Download the rockyou wordlist and place it in the same directory.***
+
+***Make sure you get the wireless adapter name correctly and try not to be connected to any networks during the crack.***
